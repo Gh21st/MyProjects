@@ -16,6 +16,6 @@ Many of these projects are built to explore different ways to structure code for
 Questions, criticism or feedback can go to 
 IsaacNAB14@gmail.com
 
-Thanks for reading
-Have a good day
+Thanks for reading,
+Have a good day,
 Isaac Boteler
