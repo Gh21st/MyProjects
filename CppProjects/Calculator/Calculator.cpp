@@ -1,19 +1,24 @@
+/*Calculator 
+ *See README.md for more info 
+ *Current Capabilities: reduction of algebraic expressions of form n : Q|[+,*,/,^]|[n,Q] 
+ *Immediate Future: support for common constants (pi,e)
+ *Sometime Future: support for parantheses 
+ *Maybe Future: support for common functions (trig,log,ln) 
+ */
+ 
 #include <iostream> 
 #include <string> 
 #include <cmath>
-//Make a function that can reduce any string expression of type 
-//n = Q|[+,-,*,/,^]|[n,Q]
-//Solving is weird because we have to observe PEMDAS 
-//We will reduce the expression to ans from left to right while observing PEMDAS
-//ans will be our final ans 
-//To this end we must first solve the next term before adding it to ans 
-//This will require 3 nested loops, add/subtract, mult/div, powers 
-//NO PARANTHESES
 
+
+
+//Function Decl 
 
 long double Reducer(const std::string&);
 long double NumFromString(const std::string&,int&); 
 
+
+//Runner Code 
 int main() {
 	std::string input = "NOT EXIT";
 	while (input != "EXIT") {
@@ -31,7 +36,20 @@ int main() {
 
 
 
-//string is of form n = Q|[+,*,/,^]|[n|Q]
+//Func Def 
+
+//Function is designed to store little extra information 
+//We reduce from left to right with ans being our final answer 
+//Read a number
+//Check if number is raised to a power
+	//reduce the Q^Q situation to Q 
+//Check if number is multiplied to another 
+	//Check if that number is raised to a power 
+		//reduce the Q^Q situation to Q 
+	//Reduce the Q*Q situation to Q 
+//Add Q to ans 
+//Repeat until end of input
+
 //Subtraction is represented as the addition of a negative : a - b = a + -b
 long double Reducer(const std::string& input) {
 	int len = input.length(); 
