@@ -1,8 +1,8 @@
 /*Calculator 
  *See README.md for more info 
- *Current Capabilities: reduction of algebraic expressions of form n : Q|[+,*,/,^]|[n,Q] 
- *Immediate Future: support for common constants support for parantheses 
- *Maybe Future: support for common functions (trig,log,ln) 
+ *Current Capabilities: reduction of algebraic expressions with operators [+,*,/,^] (subtraction is the addition of a negative) 
+ *Parantheses are supported, EXAMPLE: 2*(2+3-(5*9/(2+3)-2)+1)-(1+1)
+ *NO WHITESPACE, DO NOT OMIT OPERATORS FOR PARANTHESES 
  */
  
 #include <iostream> 
